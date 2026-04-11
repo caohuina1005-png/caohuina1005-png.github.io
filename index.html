@@ -36,15 +36,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(244,241,235,
 
 /* LAYOUT */
 main{max-width:860px;margin:0 auto;padding:0 3rem;}
-section{padding:3.5rem 0;border-bottom:1px solid var(--border);}
+section{padding:2.75rem 0;border-bottom:1px solid var(--border);}
 section:last-child{border-bottom:none;}
 
-.eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px;}
 .eyebrow::before{content:'';display:block;width:18px;height:1px;background:var(--accent);opacity:0.5;}
 
 /* HERO */
 #hero{padding-top:6.5rem;padding-bottom:3rem;}
-.hero-role{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;}
+.hero-role{font-family:'DM Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text2);margin-bottom:0.75rem;}
 .hero-name{font-family:'Instrument Serif',serif;font-size:clamp(38px,5.5vw,60px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;color:var(--text);margin-bottom:0.9rem;}
 .hero-name em{font-style:italic;color:var(--accent);}
 .hero-bio{font-size:14px;color:var(--text2);max-width:620px;line-height:1.85;margin-bottom:0.6rem;}
@@ -113,7 +113,7 @@ section:last-child{border-bottom:none;}
 .exp-points li::before{content:'—';position:absolute;left:0;color:var(--subtle);}
 
 /* STACK */
-.stack-block{display:flex;flex-direction:column;gap:1.1rem;}
+.stack-block{display:flex;flex-direction:column;gap:0.65rem;}
 .stack-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--subtle);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.35rem;}
 .stack-row{margin-bottom:0.1rem;}.stack-pills{display:flex;flex-wrap:wrap;gap:6px;}
 .stack-pill{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);padding:4px 11px;border:1px solid var(--border2);background:var(--surface);transition:color 0.2s,border-color 0.2s;}
@@ -174,6 +174,32 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
   .stack-block{grid-template-columns:1fr;gap:0.4rem;}
   .modal-metrics{grid-template-columns:1fr 1fr;}
 }
+
+/* DESKTOP RESPONSIVE */
+@media(min-width:1024px){
+  body{font-size:15.5px;}
+  main{max-width:960px;padding:0 4rem;}
+  nav{padding:0 4rem;}
+  .hero-name{font-size:clamp(52px,6vw,72px);}
+  .hero-bio{font-size:15.5px;max-width:640px;}
+  .hero-belief{font-size:14.5px;max-width:600px;}
+  #hero{padding-top:7.5rem;padding-bottom:4rem;}
+  section{padding:3.5rem 0;}
+  .cap-card{padding:1.35rem 1.4rem;}
+  .cap-title{font-size:13.5px;}
+  .cap-desc{font-size:12.5px;}
+  .proj-title{font-size:19px;}
+  .proj-desc{font-size:13.5px;}
+  .impact-num{font-size:27px;}
+  .exp-chewy-narrative{font-size:14px;}
+  .exp-chewy-co{font-size:16px;}
+  .modal-title{font-size:24px;}
+  .modal-body{font-size:14px;}
+  .modal-body ul li{font-size:13.5px;}
+  .stack-pill{font-size:12.5px;padding:5px 13px;}
+  .contact-value{font-size:14px;}
+  .contact-note{font-size:13.5px;}
+}
 </style>
 </head>
 <body>
@@ -193,7 +219,7 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-role fade-up d1">Fulfillment Performance & Operational Solutions · BI · Data Engineering</div>
+    <div class="hero-role fade-up d1">Analytics & Operations Professional · e-Commerce · Supply Chain · Fintech · KPI Architecture · Operational Strategy & Performance</div>
     <h1 class="hero-name fade-up d2">Huina<br><em>(Naomi)</em> Cao</h1>
     <p class="hero-bio fade-up d3">I design the infrastructure that makes operational performance <strong>governable</strong>. Not dashboards — decision systems. The kind that replace fragmented shadow tools with a single trusted source of truth, turn ambiguous stakeholder problems into structured governance frameworks, and give leadership the clarity to act at the right altitude.</p>
     <p class="hero-belief fade-up d3">Good analytics isn't about surfacing data. It's about encoding the right judgment into the system — so the organization can move faster, with less noise, and more confidence.</p>
@@ -261,12 +287,12 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
       <div class="proj-item" onclick="openModal('pra')">
         <div>
           <div class="proj-tag">Chewy · Exception & Risk Management</div>
-          <div class="proj-title">Defect Workflow Risk Attribution Engine</div>
-          <div class="proj-desc">Designed a probabilistic defect risk scoring system that reconstructs fulfillment workflows and attributes defect injection risk across transaction paths using DPMO-based normalization.</div>
+          <div class="proj-title">Probabilistic Defect Risk Attribution Engine</div>
+          <div class="proj-desc">Developed a probabilistic defect risk attribution model to shift inventory counting from blanket coverage to targeted execution across ~4.5M annual cycle counts — improving defect detection yield by 18.5% and counting efficiency by 6.5%, on a trajectory to eliminate ~64,000 labor hours of low-value counting annually.</div>
         </div>
         <div class="proj-impact">
-          <span class="impact-num">~70%</span>
-          <span class="impact-label">low-yield reduction</span>
+          <span class="impact-num">64K</span>
+          <span class="impact-label">labor hrs eliminated</span>
           <div class="proj-arrow">→</div>
         </div>
       </div>
@@ -278,8 +304,8 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
           <div class="proj-desc">Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.</div>
         </div>
         <div class="proj-impact">
-          <span class="impact-num">$76M</span>
-          <span class="impact-label">annualized savings</span>
+          <span class="impact-num">~55%</span>
+          <span class="impact-label">MNR DPMO reduction</span>
           <div class="proj-arrow">→</div>
         </div>
       </div>
@@ -301,7 +327,7 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
       <div class="exp-chewy-highlights">
         <div class="exp-highlight"><span class="exp-highlight-num">40+</span><span class="exp-highlight-label">KPIs governed across 5 operational domains</span></div>
         <div class="exp-highlight"><span class="exp-highlight-num">~70%</span><span class="exp-highlight-label">Reduction in low-yield inventory counts</span></div>
-        <div class="exp-highlight"><span class="exp-highlight-num">$76M</span><span class="exp-highlight-label">Annualized savings from MNR visibility</span></div>
+        <div class="exp-highlight"><span class="exp-highlight-num">~64K</span><span class="exp-highlight-label">Labor hours eliminated via risk-targeted counting</span></div>
       </div>
     </div>
 
@@ -337,48 +363,54 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
   <section id="stack">
     <div class="eyebrow">Skills & tools</div>
     <div class="stack-block">
-      <div class="stack-label">Operational Analytics</div>
+      <div class="stack-label">Strategy & Operations Analytics</div>
       <div class="stack-pills">
         <span class="stack-pill core">KPI Architecture</span>
-        <span class="stack-pill core">SOP Governance</span>
-        <span class="stack-pill core">Carrier Performance Mgmt</span>
         <span class="stack-pill core">Performance Monitoring</span>
+        <span class="stack-pill core">Business Strategy & Insights</span>
+        <span class="stack-pill core">Funnel Analysis</span>
         <span class="stack-pill core">Process Optimization</span>
+        <span class="stack-pill core">SOP Standardization</span>
+      </div>
+      <div class="stack-label">Data Analysis & Diagnostics</div>
+      <div class="stack-pills">
+        <span class="stack-pill core">Advanced SQL (Snowflake)</span>
+        <span class="stack-pill core">Trend & Anomaly Analysis</span>
+        <span class="stack-pill core">Root Cause Analysis</span>
+        <span class="stack-pill">A/B Testing</span>
+        <span class="stack-pill">Hypothesis Testing</span>
+        <span class="stack-pill">Data Validation</span>
       </div>
       <div class="stack-label">BI & Visualization</div>
       <div class="stack-pills">
         <span class="stack-pill core">Tableau (Advanced)</span>
         <span class="stack-pill core">Dashboard Design</span>
         <span class="stack-pill core">Data Storytelling</span>
+        <span class="stack-pill">Executive Presentations</span>
       </div>
-      <div class="stack-label">Data Modeling & Engineering</div>
+      <div class="stack-label">Program & Project Mgmt</div>
       <div class="stack-pills">
-        <span class="stack-pill">Advanced SQL (Snowflake)</span>
+        <span class="stack-pill">Cross-functional Project Management</span>
+        <span class="stack-pill">Stakeholder Alignment</span>
+        <span class="stack-pill">Workstream Coordination</span>
+        <span class="stack-pill">Agile / Scrum</span>
+      </div>
+      <div class="stack-label">Data Engineering</div>
+      <div class="stack-pills">
         <span class="stack-pill">dbt</span>
-        <span class="stack-pill">Data Modeling</span>
-        <span class="stack-pill">ETL/ELT</span>
-        <span class="stack-pill">Relational Data Structures</span>
-      </div>
-      <div class="stack-label">Data Analytics</div>
-      <div class="stack-pills">
-        <span class="stack-pill">Query Optimization</span>
-        <span class="stack-pill">Data Validation</span>
-        <span class="stack-pill">Trend & Anomaly Analysis</span>
-      </div>
-      <div class="stack-label">Statistical Methods</div>
-      <div class="stack-pills">
-        <span class="stack-pill">Python (Pandas)</span>
-        <span class="stack-pill">A/B Testing</span>
-        <span class="stack-pill">Hypothesis Testing</span>
-        <span class="stack-pill">Regression Analysis</span>
-      </div>
-      <div class="stack-label">Infrastructure</div>
-      <div class="stack-pills">
         <span class="stack-pill">Airflow</span>
+        <span class="stack-pill">ETL/ELT</span>
+        <span class="stack-pill">Data Modeling</span>
         <span class="stack-pill">Pipeline Automation</span>
+      </div>
+      <div class="stack-label">Tools</div>
+      <div class="stack-pills">
+        <span class="stack-pill">Snowflake</span>
+        <span class="stack-pill">Python (Pandas)</span>
         <span class="stack-pill">GitHub</span>
         <span class="stack-pill">Jira</span>
-        <span class="stack-pill">Confluence</span>
+        <span class="stack-pill">Google Sheets</span>
+        <span class="stack-pill">Excel</span>
       </div>
     </div>
   </section>
@@ -465,14 +497,14 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
   <div class="modal">
     <button class="modal-close" onclick="closeModal('pra')">✕</button>
     <div class="modal-tag">Exception & Risk Management</div>
-    <div class="modal-title">Defect Workflow Risk Attribution Engine</div>
+    <div class="modal-title">Probabilistic Defect Risk Attribution Engine</div>
     <div class="modal-metrics">
-      <div class="modal-metric"><span class="num">~70%</span><span class="lbl">Low-yield reduction</span></div>
-      <div class="modal-metric"><span class="num">DPMO</span><span class="lbl">Normalized risk metric</span></div>
-      <div class="modal-metric"><span class="num">Automated</span><span class="lbl">Weekly pipeline</span></div>
+      <div class="modal-metric"><span class="num">~64K</span><span class="lbl">Labor hrs eliminated</span></div>
+      <div class="modal-metric"><span class="num">+18.5%</span><span class="lbl">Defect detection yield</span></div>
+      <div class="modal-metric"><span class="num">+6.5%</span><span class="lbl">Counting efficiency</span></div>
     </div>
     <div class="modal-body">
-      <p>Random Counts are one of the most labor-intensive inventory control mechanisms in fulfillment — but the organization had no systematic way to explain why defects were happening or which transaction paths were injecting risk. Everything was intuition-driven.</p>
+      <p>Random Counts consume ~4.5M cycle counts annually — but without a way to distinguish high-risk from low-risk bins, coverage was blanket rather than targeted. The organization had no systematic way to attribute defect injection risk to specific transaction paths, making it impossible to prioritize where counting effort would actually matter.</p>
 
       <h4>The key conceptual shift</h4>
       <ul>
