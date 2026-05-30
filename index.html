@@ -475,11 +475,11 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
     <div class="modal-tag">Performance Governance · Data Engineering</div>
     <div class="modal-title">Quality Fulfillment Metrics — National Performance Governance System</div>
     <div class="modal-metrics">
-      <div class="modal-metric"><span class="num">40</span><span class="lbl">KPIs governed</span></div>
-      <div class="modal-metric"><span class="num">5K+</span><span class="lbl">SQL lines refactored</span></div>
-      <div class="modal-metric"><span class="num">3-tier</span><span class="lbl">User experience</span></div>
+      <div class="modal-metric"><span class="num">40</span><span class="lbl" data-i18n="m-qpd-m1-lbl">KPIs governed</span></div>
+      <div class="modal-metric"><span class="num">5K+</span><span class="lbl" data-i18n="m-qpd-m2-lbl">SQL lines refactored</span></div>
+      <div class="modal-metric"><span class="num">3-tier</span><span class="lbl" data-i18n="m-qpd-m3-lbl">User experience</span></div>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" data-i18n="m-qpd-body">
       <p>The QFM project was not a dashboard upgrade — it was the reconstruction of Chewy's entire quality performance governance foundation. The legacy QPD had lost organizational trust, caused fulfillment centers to build shadow tracking tools, and left leadership without a reliable network-wide view across 40 KPIs.</p>
 
       <h4>The Problem — Three layers of failure</h4>
@@ -511,14 +511,14 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 <div class="modal-overlay" id="modal-pra" onclick="closeOnBackdrop(event,'pra')">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('pra')">✕</button>
-    <div class="modal-tag">Chewy · Predictive Analytics · Data Science</div>
-    <div class="modal-title">Predictive Risk Scoring Framework — Inventory Audit Optimization</div>
+    <div class="modal-tag" data-i18n="m-pra-tag">Chewy · Predictive Analytics · Data Science</div>
+    <div class="modal-title" data-i18n="m-pra-title">Predictive Risk Scoring Framework — Inventory Audit Optimization</div>
     <div class="modal-metrics">
-      <div class="modal-metric"><span class="num">4.5M</span><span class="lbl">Cycle counts optimized</span></div>
-      <div class="modal-metric"><span class="num">70%</span><span class="lbl">Labor reduction target</span></div>
-      <div class="modal-metric"><span class="num">0.73</span><span class="lbl">AUC-ROC</span></div>
+      <div class="modal-metric"><span class="num">4.5M</span><span class="lbl" data-i18n="m-pra-m1-lbl">Cycle counts optimized</span></div>
+      <div class="modal-metric"><span class="num">70%</span><span class="lbl" data-i18n="m-pra-m2-lbl">Labor reduction target</span></div>
+      <div class="modal-metric"><span class="num">0.73</span><span class="lbl" data-i18n="m-pra-m3-lbl">AUC-ROC</span></div>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" data-i18n="m-pra-body">
       <p>Inventory accuracy is foundational to fulfillment operations — yet the organization was conducting 4.5 million audits annually through entirely random sampling. The process was labor-intensive, expensive, and untargeted. The question was: could we make auditing risk-driven instead of random?</p>
 
       <h4>The insight</h4>
@@ -554,14 +554,14 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 <div class="modal-overlay" id="modal-mnr" onclick="closeOnBackdrop(event,'mnr')">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('mnr')">✕</button>
-    <div class="modal-tag">Chewy · Operational System Design · Business Impact</div>
-    <div class="modal-title">MNR Control Tower — Middle-Mile Visibility System</div>
+    <div class="modal-tag" data-i18n="m-mnr-tag">Chewy · Operational System Design · Business Impact</div>
+    <div class="modal-title" data-i18n="m-mnr-title">MNR Control Tower — Middle-Mile Visibility System</div>
     <div class="modal-metrics">
-      <div class="modal-metric"><span class="num">~55%</span><span class="lbl">MNR DPMO reduction</span></div>
-      <div class="modal-metric"><span class="num">5-day</span><span class="lbl">Maturity window logic</span></div>
-      <div class="modal-metric"><span class="num">Network→</span><span class="lbl">Operator level</span></div>
+      <div class="modal-metric"><span class="num">~55%</span><span class="lbl" data-i18n="m-mnr-m1-lbl">MNR DPMO reduction</span></div>
+      <div class="modal-metric"><span class="num">5-day</span><span class="lbl" data-i18n="m-mnr-m2-lbl">Maturity window logic</span></div>
+      <div class="modal-metric"><span class="num">Network→</span><span class="lbl" data-i18n="m-mnr-m3-lbl">Operator level</span></div>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" data-i18n="m-mnr-body">
       <p>Shipments were being marked "shipped" in the warehouse system but in some cases never entered the carrier network. From an operations view: no visibility at the warehouse-to-carrier handoff, no standardized metric, and no way to quantify the scale of the problem.</p>
 
       <h4>Problem definition & metric design</h4>
@@ -592,96 +592,122 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 var translations = {
   // Nav
   "nav-cap": {en:"Capabilities", zh:"核心能力"},
-  "nav-proj": {en:"Projects", zh:"项目"},
-  "nav-exp": {en:"Experience", zh:"经历"},
-  "nav-stack": {en:"Skills", zh:"技能"},
-  "nav-contact": {en:"Contact", zh:"联系"},
+  "nav-proj": {en:"Projects", zh:"项目经验"},
+  "nav-exp": {en:"Experience", zh:"工作经历"},
+  "nav-stack": {en:"Skills", zh:"技能专长"},
+  "nav-contact": {en:"Contact", zh:"联系方式"},
 
   // Hero
   "hero-role": {en:"Analytics · Data Science · Business Strategy | KPI Governance · Predictive Modeling · Data Engineering | e-Commerce · Supply Chain · Fintech", zh:"数据分析 · 数据科学 · 商业战略 | KPI治理 · 预测建模 · 数据工程 | 电商 · 供应链 · 金融科技"},
-  "hero-bio": {en:'I turn ambiguous business problems into <strong>structured, measurable data solutions</strong>. From governance frameworks that restored organizational trust across a national network, to predictive models that replaced million-dollar random processes with targeted, evidence-based execution — I work across the full analytics stack: system design, statistical modeling, and strategic intelligence.', zh:'我将模糊的业务问题转化为<strong>结构化、可衡量的数据解决方案</strong>。从重建全国网络组织信任的治理框架，到用预测模型替代百万美元级随机流程实现精准执行——我跨越完整的分析技术栈：系统设计、统计建模与战略洞察。'},
-  "hero-belief": {en:"Good analytics isn't about surfacing data. It's about encoding the right judgment — whether through governance logic, statistical models, or decision architecture — so the organization acts smarter, faster, and with less waste.", zh:"好的分析不只是呈现数据，而是将正确的判断编码到系统中——无论通过治理逻辑、统计模型还是决策架构——让组织更智慧、更高效、更少浪费地行动。"},
+  "hero-bio": {en:'I turn ambiguous business problems into <strong>structured, measurable data solutions</strong>. From governance frameworks that restored organizational trust across a national network, to predictive models that replaced million-dollar random processes with targeted, evidence-based execution — I work across the full analytics stack: system design, statistical modeling, and strategic intelligence.', zh:'擅长将模糊的业务问题拆解为<strong>结构化、可量化的数据解决方案</strong>。曾主导全国履约网络的 KPI 治理体系重建，也构建过预测模型将百万美元级随机流程转化为精准执行——覆盖系统设计、统计建模与商业洞察的全链路分析能力。'},
+  "hero-belief": {en:"Good analytics isn't about surfacing data. It's about encoding the right judgment — whether through governance logic, statistical models, or decision architecture — so the organization acts smarter, faster, and with less waste.", zh:"好的分析不是把数据摆出来，而是把正确的判断逻辑嵌入系统——不管是治理规则、统计模型还是决策架构——让组织决策更快、更准、更少浪费。"},
 
   // Section titles
   "ey-cap": {en:"Core capabilities", zh:"核心能力"},
-  "ey-proj": {en:"Selected projects", zh:"精选项目"},
+  "ey-proj": {en:"Selected projects", zh:"项目经验"},
   "ey-exp": {en:"Experience", zh:"工作经历"},
-  "ey-stack": {en:"Skills & tools", zh:"技能与工具"},
+  "ey-stack": {en:"Skills & tools", zh:"技能专长"},
   "ey-edu": {en:"Education", zh:"教育背景"},
   "ey-contact": {en:"Contact", zh:"联系方式"},
 
   // Capabilities
-  "cap1-t": {en:"Performance Governance", zh:"绩效治理"},
-  "cap1-d": {en:"Defining and standardizing KPI frameworks across fulfillment networks — from metric design to data contract ownership and SOX-aligned reporting.", zh:"在全国履约网络中定义和标准化KPI框架——从指标设计到数据契约归属及SOX合规报告。"},
-  "cap2-t": {en:"Operational System Design", zh:"运营系统设计"},
-  "cap2-d": {en:"Turning fragmented, ad-hoc processes into structured, scalable pipelines and multi-tier reporting architecture built to last.", zh:"将碎片化的临时流程转化为结构化、可扩展的数据管道和多层级报告架构。"},
+  "cap1-t": {en:"Performance Governance", zh:"绩效治理体系"},
+  "cap1-d": {en:"Defining and standardizing KPI frameworks across fulfillment networks — from metric design to data contract ownership and SOX-aligned reporting.", zh:"在全国履约网络中统一 KPI 口径与标准化框架，涵盖指标设计、数据契约归属及 SOX 合规报表。"},
+  "cap2-t": {en:"Operational System Design", zh:"运营数据系统设计"},
+  "cap2-d": {en:"Turning fragmented, ad-hoc processes into structured, scalable pipelines and multi-tier reporting architecture built to last.", zh:"将分散的临时流程整合为结构化、可扩展的数据管道与多层级报表架构。"},
   "cap3-t": {en:"Predictive Analytics & Statistical Modeling", zh:"预测分析与统计建模"},
-  "cap3-d": {en:"Applying statistical rigor — hypothesis testing, regression modeling, and lift analysis — to transform intuition-driven processes into predictive, risk-targeted systems.", zh:"运用统计方法——假设检验、回归建模和提升度分析——将依赖直觉的流程转变为预测性、风险导向的系统。"},
+  "cap3-d": {en:"Applying statistical rigor — hypothesis testing, regression modeling, and lift analysis — to transform intuition-driven processes into predictive, risk-targeted systems.", zh:"运用假设检验、回归建模与提升度分析等统计方法，将经验驱动的流程转化为数据驱动的风险预测机制。"},
   "cap4-t": {en:"End-to-End Data Engineering", zh:"端到端数据工程"},
-  "cap4-d": {en:"Architecting full pipelines from scratch — source staging, layered dbt transforms, incremental fact tables, and hierarchical dashboards that scale.", zh:"从零构建完整数据管道——源数据暂存、分层dbt转换、增量事实表及可扩展的层级化仪表板。"},
-  "cap5-t": {en:"Problem Framing & Strategic Translation", zh:"问题构建与战略转化"},
-  "cap5-d": {en:"Cutting through ambiguous stakeholder requests to find the real business pain point — then converting it into a governed, measurable analytics solution.", zh:"穿透模糊的利益相关方需求，找到真正的业务痛点——并将其转化为可治理、可衡量的分析解决方案。"},
-  "cap6-t": {en:"Cross-functional Execution", zh:"跨职能执行"},
-  "cap6-d": {en:"Aligning ops, product, and engineering around shared metrics and driving adoption from executive level down to site-level decision-making.", zh:"围绕共享指标协调运营、产品和工程团队，推动从高管到站点级别的决策落地。"},
+  "cap4-d": {en:"Architecting full pipelines from scratch — source staging, layered dbt transforms, incremental fact tables, and hierarchical dashboards that scale.", zh:"从零搭建完整数据链路——源数据暂存、分层 dbt 模型、增量事实表与可扩展的层级化看板。"},
+  "cap5-t": {en:"Problem Framing & Strategic Translation", zh:"需求拆解与战略转化"},
+  "cap5-d": {en:"Cutting through ambiguous stakeholder requests to find the real business pain point — then converting it into a governed, measurable analytics solution.", zh:"从模糊的跨部门需求中提炼真正的业务痛点，转化为可治理、可量化的分析解决方案。"},
+  "cap6-t": {en:"Cross-functional Execution", zh:"跨部门协作推动落地"},
+  "cap6-d": {en:"Aligning ops, product, and engineering around shared metrics and driving adoption from executive level down to site-level decision-making.", zh:"协调运营、产品与工程团队围绕统一指标对齐，推动从管理层到一线的数据驱动决策落地。"},
 
   // Projects
   "proj1-tag": {en:"Chewy · Performance Governance · Data Engineering", zh:"Chewy · 绩效治理 · 数据工程"},
-  "proj1-t": {en:"Quality Fulfillment Metrics — National Performance Governance System", zh:"质量履约指标——全国绩效治理系统"},
-  "proj1-d": {en:"Rebuilt Chewy's national quality performance infrastructure from the ground up — 40 KPIs, modular dbt pipeline, and a role-stratified Tableau workbook replacing a 5,000-line monolithic SQL script.", zh:"从零重建Chewy全国质量绩效基础设施——40个KPI、模块化dbt管道，以及分角色的Tableau工作簿，替代了5,000行的单体SQL脚本。"},
-  "proj1-impact": {en:"KPIs governed", zh:"KPI治理"},
+  "proj1-t": {en:"Quality Fulfillment Metrics — National Performance Governance System", zh:"企业级质量绩效平台——全国 KPI 治理体系"},
+  "proj1-d": {en:"Rebuilt Chewy's national quality performance infrastructure from the ground up — 40 KPIs, modular dbt pipeline, and a role-stratified Tableau workbook replacing a 5,000-line monolithic SQL script.", zh:"主导 Chewy 全国质量绩效基础设施端到端重构——标准化 40 个 KPI 口径，以模块化 dbt 管道替代 5,000 行单体 SQL，搭建分角色 Tableau 看板。"},
+  "proj1-impact": {en:"KPIs governed", zh:"KPI 治理"},
 
   "proj2-tag": {en:"Chewy · Predictive Analytics · Data Science", zh:"Chewy · 预测分析 · 数据科学"},
-  "proj2-t": {en:"Predictive Risk Scoring Framework — Inventory Audit Optimization", zh:"预测风险评分框架——库存审计优化"},
-  "proj2-d": {en:"Built a predictive risk scoring model that transformed inventory auditing from blanket random sampling into targeted, risk-based execution across ~4.5M annual cycle counts — using statistical feature validation and logistic regression to prioritize high-risk locations, targeting a 70% reduction in audit-related labor.", zh:"构建预测风险评分模型，将库存审计从全覆盖随机抽样转变为精准的风险导向执行，覆盖约450万次年度循环盘点——运用统计特征验证和逻辑回归定位高风险库位，目标降低70%审计相关人工。"},
+  "proj2-t": {en:"Predictive Risk Scoring Framework — Inventory Audit Optimization", zh:"预测风险评分框架——库存核查优化"},
+  "proj2-d": {en:"Built a predictive risk scoring model that transformed inventory auditing from blanket random sampling into targeted, risk-based execution across ~4.5M annual cycle counts — using statistical feature validation and logistic regression to prioritize high-risk locations, targeting a 70% reduction in audit-related labor.", zh:"构建预测风险评分模型，将年均 450 万次库存核查从全覆盖随机抽样转为风险优先级执行——基于假设检验与 Logistic Regression 定位高风险库位，目标降低 70% 人工核查成本。"},
   "proj2-impact": {en:"labor reduction target", zh:"人工缩减目标"},
 
-  "proj3-tag": {en:"Chewy · Operational System Design · Business Impact", zh:"Chewy · 运营系统设计 · 业务影响"},
-  "proj3-t": {en:"MNR Control Tower — Middle-Mile Visibility System", zh:"MNR控制塔——中间里程可视化系统"},
-  "proj3-d": {en:"Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.", zh:"构建端到端的MNR（已发未收）报告管道，使不可见的承运商交接风险变得可量化，实现跨履约中心和流程路径的主动监控。"},
-  "proj3-impact": {en:"MNR DPMO reduction", zh:"MNR DPMO降低"},
+  "proj3-tag": {en:"Chewy · Operational System Design · Business Impact", zh:"Chewy · 系统设计 · 业务影响"},
+  "proj3-t": {en:"MNR Control Tower — Middle-Mile Visibility System", zh:"MNR 控制塔——交付链路异常监控系统"},
+  "proj3-d": {en:"Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.", zh:"搭建端到端 MNR（已发未收）监控管道，将不可见的承运商交接风险量化可视，实现跨运营中心的主动预警与下钻分析。"},
+  "proj3-impact": {en:"MNR DPMO reduction", zh:"MNR DPMO 降低"},
 
   // Experience
   "exp-chewy-co": {en:"Chewy, Inc.", zh:"Chewy, Inc."},
-  "exp-chewy-role": {en:"BI Analyst II · Quality & Fulfillment Operations · Remote, New York", zh:"BI分析师II · 质量与履约运营 · 远程，纽约"},
-  "exp-chewy-text": {en:"Owned the end-to-end analytics infrastructure across Chewy's national fulfillment network — building systems that transformed how leadership monitors, governs, and acts on business risk. From restoring a trusted KPI governance framework, to building a predictive risk model that replaced random processes with statistically targeted execution, each initiative moved the organization from reactive firefighting toward proactive, data-driven decision-making at scale.", zh:"全权负责Chewy全国履约网络的端到端分析基础设施——构建的系统改变了领导层监控、治理和应对业务风险的方式。从恢复可信的KPI治理框架，到构建预测风险模型以统计学精准执行取代随机流程，每个项目都推动组织从被动应对走向主动的、数据驱动的规模化决策。"},
-  "exp-hl1-label": {en:"KPIs governed across 5 operational domains", zh:"跨5个运营领域治理的KPI"},
-  "exp-hl2-label": {en:"Targeted labor reduction via predictive modeling", zh:"通过预测建模实现的定向人工缩减"},
-  "exp-hl3-label": {en:"MNR DPMO reduction via control tower", zh:"通过控制塔实现的MNR DPMO降低"},
+  "exp-chewy-role": {en:"BI Analyst II · Quality & Fulfillment Operations · Remote, New York", zh:"商业智能分析师 II · 质量与履约运营 · 远程，纽约"},
+  "exp-chewy-text": {en:"Owned the end-to-end analytics infrastructure across Chewy's national fulfillment network — building systems that transformed how leadership monitors, governs, and acts on business risk. From restoring a trusted KPI governance framework, to building a predictive risk model that replaced random processes with statistically targeted execution, each initiative moved the organization from reactive firefighting toward proactive, data-driven decision-making at scale.", zh:"全权负责 Chewy 全国履约网络的数据分析基础设施建设——主导搭建的系统从根本上改变了管理层监控绩效、治理风险和推动决策的方式。从重建可信的 KPI 治理框架，到构建预测风险模型以精准执行取代随机抽样，每个项目都在推动组织从被动救火走向主动的数据驱动决策。"},
+  "exp-hl1-label": {en:"KPIs governed across 5 operational domains", zh:"覆盖 5 大运营领域的 KPI 治理"},
+  "exp-hl2-label": {en:"Targeted labor reduction via predictive modeling", zh:"通过预测建模实现定向人工缩减"},
+  "exp-hl3-label": {en:"MNR DPMO reduction via control tower", zh:"通过控制塔实现 MNR DPMO 降低"},
 
-  "exp-t1-co": {en:"Schnucks Markets · Mendix", zh:"Schnucks Markets · Mendix"},
-  "exp-t1-role": {en:"Data Scientist Consultant · Lead Generation Analyst", zh:"数据科学顾问 · 线索生成分析师"},
-  "exp-t1-note": {en:"NPS modeling, SQL pipelines, Salesforce dashboards", zh:"NPS建模、SQL管道、Salesforce仪表板"},
+  "exp-t1-co": {en:"Schnucks Markets · Mendix", zh:"Schnucks Markets · Mendix（西门子）"},
+  "exp-t1-role": {en:"Data Scientist Consultant · Lead Generation Analyst", zh:"数据科学顾问 · 销售线索分析师"},
+  "exp-t1-note": {en:"NPS modeling, SQL pipelines, Salesforce dashboards", zh:"NPS 建模、SQL 管道、Salesforce 看板"},
   "exp-t2-co": {en:"AVIC International Shenzhen", zh:"中航国际深圳"},
   "exp-t2-role": {en:"Investment Analyst Intern", zh:"投资分析实习生"},
-  "exp-t2-note": {en:"Due diligence, $770K investment secured", zh:"尽职调查，促成77万美元投资"},
+  "exp-t2-note": {en:"Due diligence, $770K investment secured", zh:"尽职调查，促成 77 万美元投资"},
   "exp-t3-co": {en:"Baidu, Inc.", zh:"百度"},
-  "exp-t3-role": {en:"SEM Analyst Intern", zh:"SEM分析实习生"},
-  "exp-t3-note": {en:"Campaign optimization, 24 enterprise accounts", zh:"广告优化，管理24个企业账户"},
+  "exp-t3-role": {en:"SEM Analyst Intern", zh:"SEM 分析实习生"},
+  "exp-t3-note": {en:"Campaign optimization, 24 enterprise accounts", zh:"广告优化，管理 24 个企业账户"},
 
   // Education
   "edu-deg": {en:"M.S. Business Analytics", zh:"商业分析硕士"},
-  "edu-school": {en:"Washington University in St. Louis — Olin Business School", zh:"圣路易斯华盛顿大学 · Olin商学院"},
+  "edu-school": {en:"Washington University in St. Louis — Olin Business School", zh:"圣路易斯华盛顿大学 · Olin 商学院"},
   "edu-sub": {en:"B.S. Logistics Management · Guangdong University of Foreign Studies", zh:"物流管理学士 · 广东外语外贸大学"},
 
   // Contact
-  "contact-note": {en:"Open to analytics, data science, and data engineering roles across e-commerce, fintech, and tech. Interested in opportunities where data drives strategic decision-making at scale.", zh:"开放数据分析、数据科学和数据工程相关机会，关注电商、金融科技和科技行业。期待数据驱动规模化战略决策的岗位。"},
+  "contact-note": {en:"Open to analytics, data science, and data engineering roles across e-commerce, fintech, and tech. Interested in opportunities where data drives strategic decision-making at scale.", zh:"开放数据分析、数据科学与数据工程方向机会，关注电商、金融科技与科技领域。期待以数据驱动规模化商业决策的岗位。"},
 
   // Buttons
-  "btn-resume": {en:"View LinkedIn ↗", zh:"查看LinkedIn ↗"},
+  "btn-resume": {en:"View LinkedIn ↗", zh:"查看 LinkedIn ↗"},
   "btn-contact": {en:"Get in Touch", zh:"联系我"},
 
   // Footer
-  "footer-text": {en:"Huina (Naomi) Cao · Analytics & Business Intelligence · New York", zh:"曹慧娜 (Naomi) · 数据分析与商业智能 · 纽约"},
+  "footer-text": {en:"Huina (Naomi) Cao · Analytics & Business Intelligence · New York", zh:"曹慧娜 (Naomi) · 数据分析与商业智能"},
 
   // Stack labels
   "sk1": {en:"Business Strategy & Analytics", zh:"商业战略与分析"},
-  "sk2": {en:"Predictive Analytics & Statistical Methods", zh:"预测分析与统计方法"},
+  "sk2": {en:"Predictive Analytics & Statistical Methods", zh:"预测分析与统计建模"},
   "sk3": {en:"Data Analysis & Diagnostics", zh:"数据分析与诊断"},
-  "sk4": {en:"BI & Visualization", zh:"商业智能与可视化"},
-  "sk5": {en:"Data Engineering", zh:"数据工程"},
+  "sk4": {en:"BI & Visualization", zh:"BI 与数据可视化"},
+  "sk5": {en:"Data Engineering", zh:"数据工程与数仓建模"},
   "sk6": {en:"Program & Project Mgmt", zh:"项目管理"},
-  "sk7": {en:"Tools", zh:"工具"}
-};
+  "sk7": {en:"Tools", zh:"工具"},
+
+  // ===== MODALS =====
+  // QFM Modal
+  "m-qpd-tag": {en:"Chewy · Performance Governance · Data Engineering", zh:"Chewy · 绩效治理 · 数据工程"},
+  "m-qpd-title": {en:"Quality Fulfillment Metrics — National Performance Governance System", zh:"企业级质量绩效平台——全国 KPI 治理体系"},
+  "m-qpd-m1-num": {en:"40", zh:"40"},
+  "m-qpd-m1-lbl": {en:"KPIs governed", zh:"KPI 治理"},
+  "m-qpd-m2-lbl": {en:"SQL lines refactored", zh:"SQL 重构"},
+  "m-qpd-m3-lbl": {en:"User experience", zh:"用户分层"},
+  "m-qpd-body": {en:'<p>The QFM project was not a dashboard upgrade — it was the reconstruction of Chewy\'s entire quality performance governance foundation. The legacy QPD had lost organizational trust, caused fulfillment centers to build shadow tracking tools, and left leadership without a reliable network-wide view across 40 KPIs.</p><h4>The Problem — Three layers of failure</h4><ul><li>Data integrity breakdown: KPI logic had drifted from business reality over time; stakeholders couldn\'t trust the numbers</li><li>Network alignment collapse: individual FCs built their own local tools with inconsistent metric definitions, making cross-site comparison impossible</li><li>Decision speed: the flat, undifferentiated layout forced managers to manually scan hundreds of cells to find issues</li></ul><h4>What I built</h4><ul><li>Audited and revalidated all 40 KPIs against current business logic through structured stakeholder conversations across 5 operational domains</li><li>Rebuilt the 5,000-line monolithic SQL script into a modular dbt architecture on Snowflake — each metric isolated with incremental processing and full lineage visibility</li><li>Designed a three-tier performance classification system (Healthy / Watch / Critical) encoding judgment directly into the reporting layer</li><li>Built a role-stratified Tableau workbook: executive heatmap, operational drill-down, and analyst-level deep dive</li></ul><h4>Outcome</h4><ul><li>Stakeholder feedback: \"a thousand times better\" than the legacy QPD with documented FC-level operational decisions driven by the new system</li><li>Restored a single trusted source of truth across the fulfillment network</li><li>Random Defect Rate — a SOX-compliance metric — now produced by a governed, auditable pipeline</li></ul>', zh:'<p>这个项目不是做一个新看板，而是重建 Chewy 整个质量绩效治理的底层基础设施。旧版 QPD 已经失去了组织信任——各运营中心自建 shadow 工具，指标口径各不相同，管理层无法在全国范围内做可靠的横向对比。</p><h4>核心问题——三层失效</h4><ul><li>数据可信度崩塌：KPI 计算逻辑与实际业务脱节，利益相关方不信任数据</li><li>全网对齐失效：各运营中心自建本地工具，指标定义不一致，跨站对比无法实现</li><li>决策效率低下：扁平化的报表布局迫使管理者手动逐行扫描数百个单元格</li></ul><h4>我做了什么</h4><ul><li>通过与 5 大运营领域的结构化沟通，逐一审计并重新验证 40 个 KPI 的业务逻辑</li><li>将 5,000 行单体 SQL 重构为 Snowflake 上的模块化 dbt 架构——每个指标独立模型，支持增量处理与全链路追溯</li><li>设计三级绩效分类体系（健康 / 关注 / 预警），将判断逻辑直接嵌入报表层</li><li>搭建分角色 Tableau 工作簿：管理层热力图、运营下钻视图、分析师单指标深度分析</li></ul><h4>成果</h4><ul><li>利益相关方反馈"比旧版好一千倍"，已有文档记录的运营中心级决策由新系统直接驱动</li><li>重建全国履约网络的统一可信数据源，消除 shadow 工具碎片化</li><li>Random Defect Rate——SOX 合规指标——现由可治理、可审计的管道产出</li></ul>'},
+
+  // PRA Modal
+  "m-pra-tag": {en:"Chewy · Predictive Analytics · Data Science", zh:"Chewy · 预测分析 · 数据科学"},
+  "m-pra-title": {en:"Predictive Risk Scoring Framework — Inventory Audit Optimization", zh:"预测风险评分框架——库存核查优化"},
+  "m-pra-m1-lbl": {en:"Cycle counts optimized", zh:"年度核查优化"},
+  "m-pra-m2-lbl": {en:"Labor reduction target", zh:"人工缩减目标"},
+  "m-pra-m3-lbl": {en:"AUC-ROC", zh:"AUC-ROC"},
+  "m-pra-body": {en:'<p>Inventory accuracy is foundational to fulfillment operations — yet the organization was conducting 4.5 million audits annually through entirely random sampling. The process was labor-intensive, expensive, and untargeted. The question was: could we make auditing risk-driven instead of random?</p><h4>The insight</h4><ul><li>While the audit process was random, the operational behaviors leading to inventory errors were not — patterns in transaction activity could predict which locations were most likely to have defects</li><li>Designed a \"workflow window\" model: for each audit, captured all operational activity between consecutive audits at the same location, creating structured observations with ~20 engineered features</li></ul><h4>Statistical validation</h4><ul><li>Ran exploratory analysis and discovered defect patterns varied dramatically across facility types — requiring separate models per region</li><li>Identified time-between-audits as a confounder and controlled for it in the model</li><li>Applied Chi-square tests for binary signals and Welch\'s t-tests for continuous features to filter for statistically significant predictors</li><li>Ran Pearson correlation analysis across all features to check for multicollinearity</li></ul><h4>Modeling & evaluation</h4><ul><li>Trained a logistic regression model using validated features with standardized scaling, producing a composite risk score per location</li><li>Achieved 0.73 AUC-ROC on the test set; top 10% highest-risk locations showed a 2x lift in defect rate — same labor, twice the detection</li></ul><h4>Outcome</h4><ul><li>Transformed the audit workflow from random sampling into targeted, risk-based execution</li><li>Defect detection efficiency improved within two months of launch</li><li>Targeting a 70% reduction in audit-related labor, projected to generate significant annual cost savings</li></ul>', zh:'<p>库存准确率是履约运营的基石——但公司每年通过完全随机抽样执行 450 万次核查，流程高度劳动密集、成本高昂且缺乏针对性。核心问题是：能否将核查从随机执行转为风险驱动？</p><h4>关键洞察</h4><ul><li>核查流程是随机的，但导致库存差异的操作行为不是——交易活动中的行为模式可以预测哪些库位更可能出现缺陷</li><li>设计"工作流窗口"模型：对每次核查，捕获同一库位两次连续核查之间的所有操作活动，构建约 20 个工程特征的结构化观测</li></ul><h4>统计验证</h4><ul><li>探索性分析发现缺陷模式在不同仓型间差异显著——需要按区域分别建模</li><li>识别出核查间隔时间是混淆变量，在模型中加以控制</li><li>对二元特征使用卡方检验、连续特征使用 Welch t 检验，筛选统计显著的预测因子</li><li>对全部特征做 Pearson 相关性分析，检查多重共线性</li></ul><h4>建模与评估</h4><ul><li>使用验证后的特征训练 Logistic Regression 模型，标准化缩放后输出每个库位的风险评分</li><li>测试集 AUC-ROC 达到 0.73；风险最高的 10% 库位缺陷率提升 2 倍——同样的人工，两倍的检出</li></ul><h4>成果</h4><ul><li>将核查流程从随机抽样转化为风险优先级执行</li><li>上线两个月内缺陷检出效率即有提升</li><li>目标降低 70% 审计相关人工，预计带来超百万美元年化成本节省</li></ul>'},
+
+  // MNR Modal
+  "m-mnr-tag": {en:"Chewy · Operational System Design · Business Impact", zh:"Chewy · 系统设计 · 业务影响"},
+  "m-mnr-title": {en:"MNR Control Tower — Middle-Mile Visibility System", zh:"MNR 控制塔——交付链路异常监控系统"},
+  "m-mnr-m1-lbl": {en:"MNR DPMO reduction", zh:"MNR DPMO 降低"},
+  "m-mnr-m2-lbl": {en:"Maturity window logic", zh:"成熟窗口逻辑"},
+  "m-mnr-m3-lbl": {en:"Operator level", zh:"下钻至操作员"},
+  "m-mnr-body": {en:'<p>Shipments were being marked \"shipped\" in the warehouse system but in some cases never entered the carrier network. From an operations view: no visibility at the warehouse-to-carrier handoff, no standardized metric, and no way to quantify the scale of the problem.</p><h4>Problem definition & metric design</h4><ul><li>Defined two MNR rules with stakeholders: shipments with only \"Out for Collection\" events, and shipments with 120+ hour tracking gaps</li><li>Identified a false-positive issue — newly shipped packages incorrectly flagged due to tracking delays — resolved with a 5-day maturity window</li></ul><h4>What I built</h4><ul><li>Designed a full SQL pipeline integrating shipment data, carrier tracking, process path info, packaging profiles, and manual handling flags</li><li>Built a hierarchical dashboard from network level down to FC, process path, profile type, manual vs. automated, and individual operator</li><li>Designed as a diagnostic tool — not just reporting — so stakeholders could identify where issues were and why</li></ul><h4>Outcome</h4><ul><li>Surfaced that manual handling flows consistently had higher MNR rates than automated sorter flows, enabling targeted interventions</li><li>Strengthened carrier performance management with data-backed insights</li><li>Shifted the organization from reactive issue handling to proactive monitoring</li></ul>', zh:'<p>部分包裹在仓储系统中被标记为"已发货"，但实际从未进入承运商网络。从运营角度看：仓库到承运商的交接环节没有可见性，没有标准化指标，也无法量化问题规模。</p><h4>问题定义与指标设计</h4><ul><li>与利益相关方共同定义两条 MNR 规则：仅有"等待揽收"事件的包裹，以及追踪更新间隔超过 120 小时的包裹</li><li>发现误报问题——新发货包裹因追踪延迟被错误标记——通过引入 5 天成熟窗口解决</li></ul><h4>我做了什么</h4><ul><li>设计完整 SQL 管道，整合发货数据、承运商追踪事件、流程路径、包装规格与人工操作标记</li><li>搭建层级化看板，支持从全网到运营中心、流程路径、包装类型、人工/自动分拣、乃至单个操作员的逐级下钻</li><li>看板定位为诊断工具而非单纯报表——让利益相关方能快速定位问题发生在哪里、为什么</li></ul><h4>成果</h4><ul><li>明确揭示人工处理流程的 MNR 率持续高于自动分拣，推动针对性流程改善</li><li>以数据支撑的洞察强化承运商绩效管理</li><li>推动组织从被动处理问题转向主动监控</li></ul>'}
+}};
 
 function setLang(lang) {
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
