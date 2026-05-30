@@ -200,6 +200,10 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
   .contact-value{font-size:14px;}
   .contact-note{font-size:13.5px;}
 }
+
+.lang-toggle{display:flex;align-items:center;gap:0;margin-left:1rem;border:1px solid var(--border2);overflow:hidden;}
+.lang-btn{padding:4px 10px;font-size:10px;letter-spacing:0.06em;cursor:pointer;background:transparent;border:none;color:var(--muted);font-family:'DM Mono',monospace;transition:all 0.2s;}
+.lang-btn.active{background:var(--accent);color:#fff;}
 </style>
 </head>
 <body>
@@ -207,105 +211,109 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 <nav>
   <div class="nav-logo">Huina (Naomi) Cao</div>
   <ul class="nav-links">
-    <li><a href="#capabilities">Capabilities</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#capabilities" data-i18n="nav-cap">Capabilities</a></li>
+    <li><a href="#projects" data-i18n="nav-proj">Projects</a></li>
+    <li><a href="#experience" data-i18n="nav-exp">Experience</a></li>
+    <li><a href="#stack" data-i18n="nav-stack">Stack</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
   </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('zh')" id="btn-zh">中文</button>
+  </div>
 </nav>
 
 <main>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-role fade-up d1">Analytics · Data Science · Business Strategy | KPI Governance · Predictive Modeling · Data Engineering | e-Commerce · Supply Chain · Fintech</div>
+    <div class="hero-role fade-up d1" data-i18n="hero-role">Analytics · Data Science · Business Strategy | KPI Governance · Predictive Modeling · Data Engineering | e-Commerce · Supply Chain · Fintech</div>
     <h1 class="hero-name fade-up d2">Huina<br><em>(Naomi)</em> Cao</h1>
-    <p class="hero-bio fade-up d3">I turn ambiguous business problems into <strong>structured, measurable data solutions</strong>. From governance frameworks that restored organizational trust across a national network, to predictive models that replaced million-dollar random processes with targeted, evidence-based execution — I work across the full analytics stack: system design, statistical modeling, and strategic intelligence.</p>
-    <p class="hero-belief fade-up d3">Good analytics isn't about surfacing data. It's about encoding the right judgment into the system — so the organization can move faster, with less noise, and more confidence.</p>
+    <p class="hero-bio fade-up d3" data-i18n="hero-bio">I turn ambiguous business problems into <strong>structured, measurable data solutions</strong>. From governance frameworks that restored organizational trust across a national network, to predictive models that replaced million-dollar random processes with targeted, evidence-based execution — I work across the full analytics stack: system design, statistical modeling, and strategic intelligence.</p>
+    <p class="hero-belief fade-up d3" data-i18n="hero-belief">Good analytics isn't about surfacing data. It's about encoding the right judgment into the system — so the organization can move faster, with less noise, and more confidence.</p>
     <div class="hero-ctas fade-up d4">
-      <a href="https://www.linkedin.com/in/huina-cao-naomi/" target="_blank" class="btn-primary">View LinkedIn ↗</a>
-      <a href="#contact" class="btn-ghost">Get in Touch</a>
+      <a href="https://www.linkedin.com/in/huina-cao-naomi/" target="_blank" class="btn-primary" data-i18n="btn-resume">View LinkedIn ↗</a>
+      <a href="#contact" class="btn-ghost" data-i18n="btn-contact">Get in Touch</a>
     </div>
   </section>
 
   <!-- CAPABILITIES -->
   <section id="capabilities">
-    <div class="eyebrow">Core capabilities</div>
+    <div class="eyebrow" data-i18n="ey-cap">Core capabilities</div>
     <div class="cap-grid">
       <div class="cap-card">
         <div class="cap-num">01</div>
-        <div class="cap-title">Performance Governance</div>
-        <div class="cap-desc">Defining and standardizing KPI frameworks across fulfillment networks — from metric design to data contract ownership and SOX-aligned reporting.</div>
+        <div class="cap-title" data-i18n="cap1-t">Performance Governance</div>
+        <div class="cap-desc" data-i18n="cap1-d">Defining and standardizing KPI frameworks across fulfillment networks — from metric design to data contract ownership and SOX-aligned reporting.</div>
       </div>
       <div class="cap-card">
         <div class="cap-num">02</div>
-        <div class="cap-title">Operational System Design</div>
-        <div class="cap-desc">Turning fragmented, ad-hoc processes into structured, scalable pipelines and multi-tier reporting architecture built to last.</div>
+        <div class="cap-title" data-i18n="cap2-t">Operational System Design</div>
+        <div class="cap-desc" data-i18n="cap2-d">Turning fragmented, ad-hoc processes into structured, scalable pipelines and multi-tier reporting architecture built to last.</div>
       </div>
       <div class="cap-card">
         <div class="cap-num">03</div>
-        <div class="cap-title">Predictive Analytics & Statistical Modeling</div>
-        <div class="cap-desc">Applying statistical rigor — hypothesis testing, regression modeling, and lift analysis — to transform intuition-driven processes into predictive, risk-targeted systems.</div>
+        <div class="cap-title" data-i18n="cap3-t">Predictive Analytics & Statistical Modeling</div>
+        <div class="cap-desc" data-i18n="cap3-d">Applying statistical rigor — hypothesis testing, regression modeling, and lift analysis — to transform intuition-driven processes into predictive, risk-targeted systems.</div>
       </div>
       <div class="cap-card">
         <div class="cap-num">04</div>
-        <div class="cap-title">End-to-End Data Engineering</div>
-        <div class="cap-desc">Architecting full pipelines from scratch — source staging, layered dbt transforms, incremental fact tables, and hierarchical dashboards that scale.</div>
+        <div class="cap-title" data-i18n="cap4-t">End-to-End Data Engineering</div>
+        <div class="cap-desc" data-i18n="cap4-d">Architecting full pipelines from scratch — source staging, layered dbt transforms, incremental fact tables, and hierarchical dashboards that scale.</div>
       </div>
       <div class="cap-card">
         <div class="cap-num">05</div>
-        <div class="cap-title">Problem Framing & Strategic Translation</div>
-        <div class="cap-desc">Cutting through ambiguous stakeholder requests to find the real business pain point — then converting it into a governed, measurable analytics solution.</div>
+        <div class="cap-title" data-i18n="cap5-t">Problem Framing & Strategic Translation</div>
+        <div class="cap-desc" data-i18n="cap5-d">Cutting through ambiguous stakeholder requests to find the real business pain point — then converting it into a governed, measurable analytics solution.</div>
       </div>
       <div class="cap-card">
         <div class="cap-num">06</div>
-        <div class="cap-title">Cross-functional Execution</div>
-        <div class="cap-desc">Aligning ops, product, and engineering around shared metrics and driving adoption from executive level down to site-level decision-making.</div>
+        <div class="cap-title" data-i18n="cap6-t">Cross-functional Execution</div>
+        <div class="cap-desc" data-i18n="cap6-d">Aligning ops, product, and engineering around shared metrics and driving adoption from executive level down to site-level decision-making.</div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="eyebrow">Selected projects</div>
+    <div class="eyebrow" data-i18n="ey-proj">Selected projects</div>
     <div class="proj-list">
 
       <div class="proj-item" onclick="openModal('qpd')">
         <div>
-          <div class="proj-tag">Chewy · Performance Governance · Data Engineering</div>
-          <div class="proj-title">Quality Fulfillment Metrics — National Performance Governance System</div>
-          <div class="proj-desc">Rebuilt Chewy's national quality performance infrastructure from the ground up — 40 KPIs, modular dbt pipeline, and a role-stratified Tableau workbook replacing a 5,000-line monolithic SQL script.</div>
+          <div class="proj-tag" data-i18n="proj1-tag">Chewy · Performance Governance · Data Engineering</div>
+          <div class="proj-title" data-i18n="proj1-t">Quality Fulfillment Metrics — National Performance Governance System</div>
+          <div class="proj-desc" data-i18n="proj1-d">Rebuilt Chewy's national quality performance infrastructure from the ground up — 40 KPIs, modular dbt pipeline, and a role-stratified Tableau workbook replacing a 5,000-line monolithic SQL script.</div>
         </div>
         <div class="proj-impact">
           <span class="impact-num">40</span>
-          <span class="impact-label">KPIs governed</span>
+          <span class="impact-label" data-i18n="proj1-impact">KPIs governed</span>
           <div class="proj-arrow">→</div>
         </div>
       </div>
 
       <div class="proj-item" onclick="openModal('pra')">
         <div>
-          <div class="proj-tag">Chewy · Predictive Analytics · Data Science</div>
-          <div class="proj-title">Predictive Risk Scoring Framework — Inventory Audit Optimization</div>
-          <div class="proj-desc">Built a predictive risk scoring model that transformed inventory auditing from blanket random sampling into targeted, risk-based execution across ~4.5M annual cycle counts — using statistical feature validation and logistic regression to prioritize high-risk locations, targeting a 70% reduction in audit-related labor.</div>
+          <div class="proj-tag" data-i18n="proj2-tag">Chewy · Predictive Analytics · Data Science</div>
+          <div class="proj-title" data-i18n="proj2-t">Predictive Risk Scoring Framework — Inventory Audit Optimization</div>
+          <div class="proj-desc" data-i18n="proj2-d">Built a predictive risk scoring model that transformed inventory auditing from blanket random sampling into targeted, risk-based execution across ~4.5M annual cycle counts — using statistical feature validation and logistic regression to prioritize high-risk locations, targeting a 70% reduction in audit-related labor.</div>
         </div>
         <div class="proj-impact">
           <span class="impact-num">70%</span>
-          <span class="impact-label">labor reduction target</span>
+          <span class="impact-label" data-i18n="proj2-impact">labor reduction target</span>
           <div class="proj-arrow">→</div>
         </div>
       </div>
 
       <div class="proj-item" onclick="openModal('mnr')">
         <div>
-          <div class="proj-tag">Chewy · Operational System Design · Business Impact</div>
-          <div class="proj-title">MNR Control Tower — Middle-Mile Visibility System</div>
-          <div class="proj-desc">Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.</div>
+          <div class="proj-tag" data-i18n="proj3-tag">Chewy · Operational System Design · Business Impact</div>
+          <div class="proj-title" data-i18n="proj3-t">MNR Control Tower — Middle-Mile Visibility System</div>
+          <div class="proj-desc" data-i18n="proj3-d">Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.</div>
         </div>
         <div class="proj-impact">
           <span class="impact-num">~55%</span>
-          <span class="impact-label">MNR DPMO reduction</span>
+          <span class="impact-label" data-i18n="proj3-impact">MNR DPMO reduction</span>
           <div class="proj-arrow">→</div>
         </div>
       </div>
@@ -315,19 +323,19 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="eyebrow">Experience</div>
+    <div class="eyebrow" data-i18n="ey-exp">Experience</div>
 
     <div class="exp-chewy">
       <div class="exp-chewy-header">
         <div class="exp-chewy-co">Chewy, Inc.</div>
         <div class="exp-chewy-date">2023 — Present</div>
       </div>
-      <div class="exp-chewy-role">BI Analyst II · Quality & Fulfillment Operations · Remote, New York</div>
-      <p class="exp-chewy-narrative">Owned the end-to-end analytics infrastructure across Chewy's national fulfillment network — building systems that transformed how leadership monitors, governs, and acts on business risk. From restoring a trusted KPI governance framework, to building a predictive risk model that replaced random processes with statistically targeted execution, each initiative moved the organization from reactive firefighting toward proactive, data-driven decision-making at scale.</p>
+      <div class="exp-chewy-role" data-i18n="exp-chewy-role">BI Analyst II · Quality & Fulfillment Operations · Remote, New York</div>
+      <p class="exp-chewy-narrative" data-i18n="exp-chewy-text">Owned the end-to-end analytics infrastructure across Chewy's national fulfillment network — building systems that transformed how leadership monitors, governs, and acts on business risk. From restoring a trusted KPI governance framework, to building a predictive risk model that replaced random processes with statistically targeted execution, each initiative moved the organization from reactive firefighting toward proactive, data-driven decision-making at scale.</p>
       <div class="exp-chewy-highlights">
-        <div class="exp-highlight"><span class="exp-highlight-num">40+</span><span class="exp-highlight-label">KPIs governed across 5 operational domains</span></div>
-        <div class="exp-highlight"><span class="exp-highlight-num">70%</span><span class="exp-highlight-label">Targeted labor reduction via predictive modeling</span></div>
-        <div class="exp-highlight"><span class="exp-highlight-num">~55%</span><span class="exp-highlight-label">MNR DPMO reduction via control tower</span></div>
+        <div class="exp-highlight"><span class="exp-highlight-num">40+</span><span class="exp-highlight-label" data-i18n="exp-hl1-label">KPIs governed across 5 operational domains</span></div>
+        <div class="exp-highlight"><span class="exp-highlight-num">70%</span><span class="exp-highlight-label" data-i18n="exp-hl2-label">Targeted labor reduction via predictive modeling</span></div>
+        <div class="exp-highlight"><span class="exp-highlight-num">~55%</span><span class="exp-highlight-label" data-i18n="exp-hl3-label">MNR DPMO reduction via control tower</span></div>
       </div>
     </div>
 
@@ -335,35 +343,35 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
       <div class="exp-timeline-item">
         <div class="exp-timeline-date">Jan – Aug 2022</div>
         <div>
-          <div class="exp-timeline-co">Schnucks Markets · Mendix</div>
-          <div class="exp-timeline-role">Data Scientist Consultant · Lead Generation Analyst</div>
+          <div class="exp-timeline-co" data-i18n="exp-t1-co">Schnucks Markets · Mendix</div>
+          <div class="exp-timeline-role" data-i18n="exp-t1-role">Data Scientist Consultant · Lead Generation Analyst</div>
         </div>
-        <div class="exp-timeline-note">NPS modeling, SQL pipelines, Salesforce dashboards</div>
+        <div class="exp-timeline-note" data-i18n="exp-t1-note">NPS modeling, SQL pipelines, Salesforce dashboards</div>
       </div>
       <div class="exp-timeline-item">
         <div class="exp-timeline-date">Nov 2020 – Apr 2021</div>
         <div>
-          <div class="exp-timeline-co">AVIC International Shenzhen</div>
-          <div class="exp-timeline-role">Investment Analyst Intern</div>
+          <div class="exp-timeline-co" data-i18n="exp-t2-co">AVIC International Shenzhen</div>
+          <div class="exp-timeline-role" data-i18n="exp-t2-role">Investment Analyst Intern</div>
         </div>
-        <div class="exp-timeline-note">Due diligence, $770K investment secured</div>
+        <div class="exp-timeline-note" data-i18n="exp-t2-note">Due diligence, $770K investment secured</div>
       </div>
       <div class="exp-timeline-item">
         <div class="exp-timeline-date">Jun – Sep 2020</div>
         <div>
-          <div class="exp-timeline-co">Baidu, Inc.</div>
-          <div class="exp-timeline-role">SEM Analyst Intern</div>
+          <div class="exp-timeline-co" data-i18n="exp-t3-co">Baidu, Inc.</div>
+          <div class="exp-timeline-role" data-i18n="exp-t3-role">SEM Analyst Intern</div>
         </div>
-        <div class="exp-timeline-note">Campaign optimization, 24 enterprise accounts</div>
+        <div class="exp-timeline-note" data-i18n="exp-t3-note">Campaign optimization, 24 enterprise accounts</div>
       </div>
     </div>
   </section>
 
   <!-- STACK -->
   <section id="stack">
-    <div class="eyebrow">Skills & tools</div>
+    <div class="eyebrow" data-i18n="ey-stack">Skills & tools</div>
     <div class="stack-block">
-      <div class="stack-label">Business Strategy & Analytics</div>
+      <div class="stack-label" data-i18n="sk1">Business Strategy & Analytics</div>
       <div class="stack-pills">
         <span class="stack-pill core">KPI Architecture</span>
         <span class="stack-pill core">Business Strategy & Insights</span>
@@ -372,7 +380,7 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
         <span class="stack-pill core">Process Optimization</span>
         <span class="stack-pill core">SOP Standardization</span>
       </div>
-      <div class="stack-label">Predictive Analytics & Statistical Methods</div>
+      <div class="stack-label" data-i18n="sk2">Predictive Analytics & Statistical Methods</div>
       <div class="stack-pills">
         <span class="stack-pill core">Predictive Modeling</span>
         <span class="stack-pill core">Logistic Regression</span>
@@ -382,21 +390,21 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
         <span class="stack-pill">Lift Analysis</span>
         <span class="stack-pill">Statistical Validation</span>
       </div>
-      <div class="stack-label">Data Analysis & Diagnostics</div>
+      <div class="stack-label" data-i18n="sk3">Data Analysis & Diagnostics</div>
       <div class="stack-pills">
         <span class="stack-pill core">Advanced SQL (Snowflake)</span>
         <span class="stack-pill core">Trend & Anomaly Analysis</span>
         <span class="stack-pill core">Root Cause Analysis</span>
         <span class="stack-pill">Data Validation</span>
       </div>
-      <div class="stack-label">BI & Visualization</div>
+      <div class="stack-label" data-i18n="sk4">BI & Visualization</div>
       <div class="stack-pills">
         <span class="stack-pill core">Tableau (Advanced)</span>
         <span class="stack-pill core">Dashboard Design</span>
         <span class="stack-pill core">Data Storytelling</span>
         <span class="stack-pill">Executive Presentations</span>
       </div>
-      <div class="stack-label">Data Engineering</div>
+      <div class="stack-label" data-i18n="sk5">Data Engineering</div>
       <div class="stack-pills">
         <span class="stack-pill">dbt</span>
         <span class="stack-pill">Airflow</span>
@@ -404,13 +412,13 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
         <span class="stack-pill">Data Modeling</span>
         <span class="stack-pill">Pipeline Automation</span>
       </div>
-      <div class="stack-label">Program & Project Mgmt</div>
+      <div class="stack-label" data-i18n="sk6">Program & Project Mgmt</div>
       <div class="stack-pills">
         <span class="stack-pill">Cross-functional Project Management</span>
         <span class="stack-pill">Stakeholder Alignment</span>
         <span class="stack-pill">Agile / Scrum</span>
       </div>
-      <div class="stack-label">Tools</div>
+      <div class="stack-label" data-i18n="sk7">Tools</div>
       <div class="stack-pills">
         <span class="stack-pill">Snowflake</span>
         <span class="stack-pill">Python (Pandas)</span>
@@ -424,17 +432,17 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
 
   <!-- EDUCATION -->
   <section id="education">
-    <div class="eyebrow">Education</div>
+    <div class="eyebrow" data-i18n="ey-edu">Education</div>
     <div class="edu-main">
-      <div class="edu-degree">M.S. Business Analytics</div>
-      <div class="edu-school">Washington University in St. Louis — Olin Business School</div>
-      <div class="edu-sub">B.S. Logistics Management · Guangdong University of Foreign Studies</div>
+      <div class="edu-degree" data-i18n="edu-deg">M.S. Business Analytics</div>
+      <div class="edu-school" data-i18n="edu-school">Washington University in St. Louis — Olin Business School</div>
+      <div class="edu-sub" data-i18n="edu-sub">B.S. Logistics Management · Guangdong University of Foreign Studies</div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="eyebrow">Contact</div>
+    <div class="eyebrow" data-i18n="ey-contact">Contact</div>
     <div class="contact-row">
       <div class="contact-cell">
         <div class="contact-label">Email</div>
@@ -449,13 +457,13 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
         <span class="contact-value">New York Area</span>
       </div>
     </div>
-    <p class="contact-note">Open to analytics, data science, and data engineering roles across e-commerce, fintech, and tech. Interested in opportunities where data drives strategic decision-making at scale.</p>
+    <p class="contact-note" data-i18n="contact-note">Open to analytics, data science, and data engineering roles across e-commerce, fintech, and tech. Interested in opportunities where data drives strategic decision-making at scale.</p>
   </section>
 
 </main>
 
 <footer>
-  <p>Huina (Naomi) Cao · Analytics & Business Intelligence · New York</p>
+  <p data-i18n="footer-text">Huina (Naomi) Cao · Analytics & Business Intelligence · New York</p>
 </footer>
 
 <!-- ===== PROJECT MODALS ===== -->
@@ -579,6 +587,114 @@ footer p{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;tex
   </div>
 </div>
 
+
+<script>
+var translations = {
+  // Nav
+  "nav-cap": {en:"Capabilities", zh:"核心能力"},
+  "nav-proj": {en:"Projects", zh:"项目"},
+  "nav-exp": {en:"Experience", zh:"经历"},
+  "nav-stack": {en:"Skills", zh:"技能"},
+  "nav-contact": {en:"Contact", zh:"联系"},
+
+  // Hero
+  "hero-role": {en:"Analytics · Data Science · Business Strategy | KPI Governance · Predictive Modeling · Data Engineering | e-Commerce · Supply Chain · Fintech", zh:"数据分析 · 数据科学 · 商业战略 | KPI治理 · 预测建模 · 数据工程 | 电商 · 供应链 · 金融科技"},
+  "hero-bio": {en:'I turn ambiguous business problems into <strong>structured, measurable data solutions</strong>. From governance frameworks that restored organizational trust across a national network, to predictive models that replaced million-dollar random processes with targeted, evidence-based execution — I work across the full analytics stack: system design, statistical modeling, and strategic intelligence.', zh:'我将模糊的业务问题转化为<strong>结构化、可衡量的数据解决方案</strong>。从重建全国网络组织信任的治理框架，到用预测模型替代百万美元级随机流程实现精准执行——我跨越完整的分析技术栈：系统设计、统计建模与战略洞察。'},
+  "hero-belief": {en:"Good analytics isn't about surfacing data. It's about encoding the right judgment — whether through governance logic, statistical models, or decision architecture — so the organization acts smarter, faster, and with less waste.", zh:"好的分析不只是呈现数据，而是将正确的判断编码到系统中——无论通过治理逻辑、统计模型还是决策架构——让组织更智慧、更高效、更少浪费地行动。"},
+
+  // Section titles
+  "ey-cap": {en:"Core capabilities", zh:"核心能力"},
+  "ey-proj": {en:"Selected projects", zh:"精选项目"},
+  "ey-exp": {en:"Experience", zh:"工作经历"},
+  "ey-stack": {en:"Skills & tools", zh:"技能与工具"},
+  "ey-edu": {en:"Education", zh:"教育背景"},
+  "ey-contact": {en:"Contact", zh:"联系方式"},
+
+  // Capabilities
+  "cap1-t": {en:"Performance Governance", zh:"绩效治理"},
+  "cap1-d": {en:"Defining and standardizing KPI frameworks across fulfillment networks — from metric design to data contract ownership and SOX-aligned reporting.", zh:"在全国履约网络中定义和标准化KPI框架——从指标设计到数据契约归属及SOX合规报告。"},
+  "cap2-t": {en:"Operational System Design", zh:"运营系统设计"},
+  "cap2-d": {en:"Turning fragmented, ad-hoc processes into structured, scalable pipelines and multi-tier reporting architecture built to last.", zh:"将碎片化的临时流程转化为结构化、可扩展的数据管道和多层级报告架构。"},
+  "cap3-t": {en:"Predictive Analytics & Statistical Modeling", zh:"预测分析与统计建模"},
+  "cap3-d": {en:"Applying statistical rigor — hypothesis testing, regression modeling, and lift analysis — to transform intuition-driven processes into predictive, risk-targeted systems.", zh:"运用统计方法——假设检验、回归建模和提升度分析——将依赖直觉的流程转变为预测性、风险导向的系统。"},
+  "cap4-t": {en:"End-to-End Data Engineering", zh:"端到端数据工程"},
+  "cap4-d": {en:"Architecting full pipelines from scratch — source staging, layered dbt transforms, incremental fact tables, and hierarchical dashboards that scale.", zh:"从零构建完整数据管道——源数据暂存、分层dbt转换、增量事实表及可扩展的层级化仪表板。"},
+  "cap5-t": {en:"Problem Framing & Strategic Translation", zh:"问题构建与战略转化"},
+  "cap5-d": {en:"Cutting through ambiguous stakeholder requests to find the real business pain point — then converting it into a governed, measurable analytics solution.", zh:"穿透模糊的利益相关方需求，找到真正的业务痛点——并将其转化为可治理、可衡量的分析解决方案。"},
+  "cap6-t": {en:"Cross-functional Execution", zh:"跨职能执行"},
+  "cap6-d": {en:"Aligning ops, product, and engineering around shared metrics and driving adoption from executive level down to site-level decision-making.", zh:"围绕共享指标协调运营、产品和工程团队，推动从高管到站点级别的决策落地。"},
+
+  // Projects
+  "proj1-tag": {en:"Chewy · Performance Governance · Data Engineering", zh:"Chewy · 绩效治理 · 数据工程"},
+  "proj1-t": {en:"Quality Fulfillment Metrics — National Performance Governance System", zh:"质量履约指标——全国绩效治理系统"},
+  "proj1-d": {en:"Rebuilt Chewy's national quality performance infrastructure from the ground up — 40 KPIs, modular dbt pipeline, and a role-stratified Tableau workbook replacing a 5,000-line monolithic SQL script.", zh:"从零重建Chewy全国质量绩效基础设施——40个KPI、模块化dbt管道，以及分角色的Tableau工作簿，替代了5,000行的单体SQL脚本。"},
+  "proj1-impact": {en:"KPIs governed", zh:"KPI治理"},
+
+  "proj2-tag": {en:"Chewy · Predictive Analytics · Data Science", zh:"Chewy · 预测分析 · 数据科学"},
+  "proj2-t": {en:"Predictive Risk Scoring Framework — Inventory Audit Optimization", zh:"预测风险评分框架——库存审计优化"},
+  "proj2-d": {en:"Built a predictive risk scoring model that transformed inventory auditing from blanket random sampling into targeted, risk-based execution across ~4.5M annual cycle counts — using statistical feature validation and logistic regression to prioritize high-risk locations, targeting a 70% reduction in audit-related labor.", zh:"构建预测风险评分模型，将库存审计从全覆盖随机抽样转变为精准的风险导向执行，覆盖约450万次年度循环盘点——运用统计特征验证和逻辑回归定位高风险库位，目标降低70%审计相关人工。"},
+  "proj2-impact": {en:"labor reduction target", zh:"人工缩减目标"},
+
+  "proj3-tag": {en:"Chewy · Operational System Design · Business Impact", zh:"Chewy · 运营系统设计 · 业务影响"},
+  "proj3-t": {en:"MNR Control Tower — Middle-Mile Visibility System", zh:"MNR控制塔——中间里程可视化系统"},
+  "proj3-d": {en:"Built an end-to-end Manifested Not Received (MNR) reporting pipeline that made an invisible carrier handoff risk measurable, enabling proactive monitoring across fulfillment centers and process paths.", zh:"构建端到端的MNR（已发未收）报告管道，使不可见的承运商交接风险变得可量化，实现跨履约中心和流程路径的主动监控。"},
+  "proj3-impact": {en:"MNR DPMO reduction", zh:"MNR DPMO降低"},
+
+  // Experience
+  "exp-chewy-co": {en:"Chewy, Inc.", zh:"Chewy, Inc."},
+  "exp-chewy-role": {en:"BI Analyst II · Quality & Fulfillment Operations · Remote, New York", zh:"BI分析师II · 质量与履约运营 · 远程，纽约"},
+  "exp-chewy-text": {en:"Owned the end-to-end analytics infrastructure across Chewy's national fulfillment network — building systems that transformed how leadership monitors, governs, and acts on business risk. From restoring a trusted KPI governance framework, to building a predictive risk model that replaced random processes with statistically targeted execution, each initiative moved the organization from reactive firefighting toward proactive, data-driven decision-making at scale.", zh:"全权负责Chewy全国履约网络的端到端分析基础设施——构建的系统改变了领导层监控、治理和应对业务风险的方式。从恢复可信的KPI治理框架，到构建预测风险模型以统计学精准执行取代随机流程，每个项目都推动组织从被动应对走向主动的、数据驱动的规模化决策。"},
+  "exp-hl1-label": {en:"KPIs governed across 5 operational domains", zh:"跨5个运营领域治理的KPI"},
+  "exp-hl2-label": {en:"Targeted labor reduction via predictive modeling", zh:"通过预测建模实现的定向人工缩减"},
+  "exp-hl3-label": {en:"MNR DPMO reduction via control tower", zh:"通过控制塔实现的MNR DPMO降低"},
+
+  "exp-t1-co": {en:"Schnucks Markets · Mendix", zh:"Schnucks Markets · Mendix"},
+  "exp-t1-role": {en:"Data Scientist Consultant · Lead Generation Analyst", zh:"数据科学顾问 · 线索生成分析师"},
+  "exp-t1-note": {en:"NPS modeling, SQL pipelines, Salesforce dashboards", zh:"NPS建模、SQL管道、Salesforce仪表板"},
+  "exp-t2-co": {en:"AVIC International Shenzhen", zh:"中航国际深圳"},
+  "exp-t2-role": {en:"Investment Analyst Intern", zh:"投资分析实习生"},
+  "exp-t2-note": {en:"Due diligence, $770K investment secured", zh:"尽职调查，促成77万美元投资"},
+  "exp-t3-co": {en:"Baidu, Inc.", zh:"百度"},
+  "exp-t3-role": {en:"SEM Analyst Intern", zh:"SEM分析实习生"},
+  "exp-t3-note": {en:"Campaign optimization, 24 enterprise accounts", zh:"广告优化，管理24个企业账户"},
+
+  // Education
+  "edu-deg": {en:"M.S. Business Analytics", zh:"商业分析硕士"},
+  "edu-school": {en:"Washington University in St. Louis — Olin Business School", zh:"圣路易斯华盛顿大学 · Olin商学院"},
+  "edu-sub": {en:"B.S. Logistics Management · Guangdong University of Foreign Studies", zh:"物流管理学士 · 广东外语外贸大学"},
+
+  // Contact
+  "contact-note": {en:"Open to analytics, data science, and data engineering roles across e-commerce, fintech, and tech. Interested in opportunities where data drives strategic decision-making at scale.", zh:"开放数据分析、数据科学和数据工程相关机会，关注电商、金融科技和科技行业。期待数据驱动规模化战略决策的岗位。"},
+
+  // Buttons
+  "btn-resume": {en:"View LinkedIn ↗", zh:"查看LinkedIn ↗"},
+  "btn-contact": {en:"Get in Touch", zh:"联系我"},
+
+  // Footer
+  "footer-text": {en:"Huina (Naomi) Cao · Analytics & Business Intelligence · New York", zh:"曹慧娜 (Naomi) · 数据分析与商业智能 · 纽约"},
+
+  // Stack labels
+  "sk1": {en:"Business Strategy & Analytics", zh:"商业战略与分析"},
+  "sk2": {en:"Predictive Analytics & Statistical Methods", zh:"预测分析与统计方法"},
+  "sk3": {en:"Data Analysis & Diagnostics", zh:"数据分析与诊断"},
+  "sk4": {en:"BI & Visualization", zh:"商业智能与可视化"},
+  "sk5": {en:"Data Engineering", zh:"数据工程"},
+  "sk6": {en:"Program & Project Mgmt", zh:"项目管理"},
+  "sk7": {en:"Tools", zh:"工具"}
+};
+
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-zh').classList.toggle('active', lang==='zh');
+  var els = document.querySelectorAll('[data-i18n]');
+  els.forEach(function(el){
+    var key = el.getAttribute('data-i18n');
+    if(translations[key] && translations[key][lang]){
+      el.innerHTML = translations[key][lang];
+    }
+  });
+}
+</script>
 <script>
 function openModal(id){
   document.getElementById('modal-'+id).classList.add('open');
